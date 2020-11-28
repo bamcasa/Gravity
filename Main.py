@@ -14,6 +14,7 @@ class Flappybird:
         self.ball = 0
         self.speed = 1
         self.clicked = False
+        self.abc = False
     def show(self):
         self.screen.fill((255,255,255))
         self.ball = pygame.draw.circle(self.screen, (190,190,190), [self.ball_x, self.ball_y], 40)
@@ -54,9 +55,10 @@ class Flappybird:
                     if self.ball.collidepoint(pos):
                         self.abc = True
                 if event.type == pygame.MOUSEBUTTONUP:
-                    self.clicked = False
-                    self.speed = 1
-                    self.abc = False
+                    if self.abc:
+                        self.speed = 1
+                        self.clicked = False
+                        self.abc = False
             self.drag()
             self.gravity()
             Flappybird.show(self)
