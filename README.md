@@ -4,5 +4,5 @@
 제작시간 30분<br/>
 # 사용한 라이브러리
 pygame
-#예시
+# 예시
 ![Alt text](https://raw.githubusercontent.com/bamcasa/Gravity/main/sample.gif)
